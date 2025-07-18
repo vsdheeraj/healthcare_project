@@ -50,7 +50,7 @@ A robust Django REST Framework backend for healthcare management, enabling secur
 
 1. Clone the repository
    ```
-   git clone https://github.com/yourusername/healthcare-backend.git
+   git clone https://github.com/vsdheeraj/healthcare_project.git
    cd healthcare-backend
    ```
 
