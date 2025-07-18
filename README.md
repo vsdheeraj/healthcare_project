@@ -87,20 +87,33 @@ A robust Django REST Framework backend for healthcare management, enabling secur
    python manage.py migrate
    ```
 
-8. Create test data (optional)
-   ```
-   python manage.py create_test_data
-   ```
-
-9. Start the development server
+8. Start the development server
    ```
    python manage.py runserver
    ```
 
-## Testing
+## API Endpoints
 
-A Postman collection is included in the repository for API testing.
+### Authentication
+- POST /api/auth/register/ - Register a new user
+- POST /api/auth/login/ - Login and get JWT token
 
-## License
+### Patient Management
+- POST /api/patients/ - Add a new patient
+- GET /api/patients/ - Get all patients
+- GET /api/patients/<id>/ - Get patient details
+- PUT /api/patients/<id>/ - Update patient
+- DELETE /api/patients/<id>/ - Delete patient
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+### Doctor Management
+- POST /api/doctors/ - Add a new doctor
+- GET /api/doctors/ - Get all doctors
+- GET /api/doctors/<id>/ - Get doctor details
+- PUT /api/doctors/<id>/ - Update doctor
+- DELETE /api/doctors/<id>/ - Delete doctor
+
+### Patient-Doctor Mappings
+- POST /api/mappings/ - Assign doctor to patient
+- GET /api/mappings/ - Get all mappings
+- GET /api/mappings/<patient_id>/ - Get doctors for a patient
+- DELETE /api/mappings/<id>/ - Remove doctor from patient 
